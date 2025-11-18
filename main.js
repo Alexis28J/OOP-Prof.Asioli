@@ -97,9 +97,14 @@ const stefania = new Student("stefania", "dagnino", [10, 9, 7, 8, 8]);
 const leonardo = new Student("leonardo", "silva", [3, 4, 4, 2, 5]);
 const salma = new Student("salma", "sobhi", [6, 6, 6]);
 
-const andrea = new Teacher("andrea", "asioli", [stefania, leonardo, salma]);
-
 const eros = new StudentTutor("eros", "balan", [10, 9, 7, 8, 8], leonardo);
+
+const andrea = new Teacher("andrea", "asioli", [stefania, leonardo, salma]);
+const evelin = new Teacher("evelin", "medina", [eros]);
+
+
+
+const elisabetta = new Principal("elisabbetta", "fegino", [andrea, evelin])
 
 
 console.log(stefania.toString());
@@ -136,3 +141,14 @@ console.log(andrea.toString());
 //salma sobhi - media: 6
 //--------------------
 //media della classe :6,68
+
+
+console.log(elisabetta.toString())
+
+//nome: elisabetta
+//cognome: fegino
+//--------------------
+//insegnanti:
+//asioli andrea - numero studenti: 3
+//evelin medina - numero studenti: 1
+
