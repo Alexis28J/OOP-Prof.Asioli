@@ -1,10 +1,10 @@
 console.log('object oriented programming')
 
 //const stefania = {name: "stefania", surname: "dagnino", marks: [10, 9, 7, 8, 8]};
-const stefania = new Student("stefania", "dagnino", [10, 9, 7, 8, 8])
+
 
 //const leonardo = {name: "leonardo", surname: "silva", marks: [3, 4, 4, 2, 5]};
-const leonardo = new Student("leonardo", "silva", [3, 4, 4, 2, 5])
+
 
 // function calculateStudentMean(student){
 
@@ -25,8 +25,6 @@ const leonardo = new Student("leonardo", "silva", [3, 4, 4, 2, 5])
 // console.log(calculateStudentMean(stefania));
 // console.log(calculateStudentMean(leonardo));
 
-console.log(stefania.calculateMean())
-console.log(leonardo.calculateMean())
 
 // function addMark(student, newMark) {
 
@@ -44,23 +42,53 @@ console.log(leonardo.calculateMean())
 // addMark(leonardo, 20);
 // console.log(calculateStudentMean(leonardo));
 
+
+
+// function creaScheda(student) {
+
+//     const scheda = "nome: " + student.name + "\n" +
+//                    "cognome: " + student.surname + "\n" +
+//                    "media: " + calculateStudentMean(student)
+    
+//     return scheda;
+    
+// }
+
+// console.log(creaScheda(stefania));
+// console.log(creaScheda(leonardo));
+
+
+
+
+const stefania = new Student("stefania", "dagnino", [10, 9, 7, 8, 8])
+const leonardo = new Student("leonardo", "silva", [3, 4, 4, 2, 5])
+const salma = new Student("salma", "sobhi")
+
+
+console.log(stefania.calculateMean())
+console.log(leonardo.calculateMean())
+console.log(salma.calculateMean())
+
+
 stefania.addMark(10);
 console.log(stefania.calculateMean());
-
 
 leonardo.addMark(20);
 console.log(leonardo.calculateMean());
 
+console.log("Studente:\n" + stefania);
+console.log(leonardo.toString());
 
-function creaScheda(student) {
 
-    const scheda = "nome: " + student.name + "\n" +
-                   "cognome: " + student.surname + "\n" +
-                   "media: " + calculateStudentMean(student)
-    
-    return scheda;
-    
-}
 
-console.log(creaScheda(stefania));
-console.log(creaScheda(leonardo));
+const rect1 = new Rettangolo(30, 20, 'rosso');
+
+console.log(rect1.calcolaArea()) // 600
+console.log(rect1.calcolaPerimetro()); // 100
+console.log(rect1.toString())
+//Rettangolo
+//base: 30
+//altezza: 20
+//colore: rosso
+//area: 600
+//perimetro: 100

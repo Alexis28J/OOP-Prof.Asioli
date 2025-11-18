@@ -3,10 +3,25 @@ class Student {
     constructor(name, surname, marks) {
         this.name = name;
         this.surname = surname;
-        this.marks = marks;
+        if(marks){
+            this.marks = marks;
+        } else {
+            this.marks = [];
+        }
+        
     }
 
+    // constructor(name, surname, marks = []) {
+    //     this.name = name;
+    //     this.surname = surname;
+    //     this.marks = marks;  
+    // }
+
     calculateMean() {
+
+        if (this.marks.length === 0) {
+            return "non disponibile"
+        }
 
         let sum = 0;
 
@@ -29,6 +44,14 @@ class Student {
         } else {
             console.log('errore, voto non valido');
         }
+    }
+
+    toString() {
+        const scheda = "nome: " + this.name + "\n" +
+                       "cognome: " + this.surname + "\n" +
+                       "media: " + this.calculateMean();
+
+        return scheda;
     }
 
 }
