@@ -1,8 +1,7 @@
-class Student {
+class Student extends Human {
 
     constructor(name, surname, marks) {
-        this.name = name;
-        this.surname = surname;
+        super(name, surname)
         if(marks){
             this.marks = marks;
         } else {
@@ -47,8 +46,7 @@ class Student {
     }
 
     toString() {
-        const scheda = "nome: " + this.name + "\n" +
-                       "cognome: " + this.surname + "\n" +
+        const scheda = super.toString() + "\n" +
                        "media: " + this.calculateMean();
 
         return scheda;

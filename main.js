@@ -60,35 +60,79 @@ console.log('object oriented programming')
 
 
 
-const stefania = new Student("stefania", "dagnino", [10, 9, 7, 8, 8])
-const leonardo = new Student("leonardo", "silva", [3, 4, 4, 2, 5])
-const salma = new Student("salma", "sobhi")
+// const stefania = new Student("stefania", "dagnino", [10, 9, 7, 8, 8])
+// const leonardo = new Student("leonardo", "silva", [3, 4, 4, 2, 5])
+// const salma = new Student("salma", "sobhi")
 
 
-console.log(stefania.calculateMean())
-console.log(leonardo.calculateMean())
-console.log(salma.calculateMean())
+// console.log(stefania.calculateMean())
+// console.log(leonardo.calculateMean())
+// console.log(salma.calculateMean())
 
 
-stefania.addMark(10);
-console.log(stefania.calculateMean());
+// stefania.addMark(10);
+// console.log(stefania.calculateMean());
 
-leonardo.addMark(20);
-console.log(leonardo.calculateMean());
+// leonardo.addMark(20);
+// console.log(leonardo.calculateMean());
 
-console.log("Studente:\n" + stefania);
-console.log(leonardo.toString());
+// console.log("Studente:\n" + stefania);
+// console.log(leonardo.toString());
 
+// ////////////////////
 
+// const rect1 = new Rectangle(30, 20, 'rosso');
 
-const rect1 = new Rettangolo(30, 20, 'rosso');
-
-console.log(rect1.calcolaArea()) // 600
-console.log(rect1.calcolaPerimetro()); // 100
-console.log(rect1.toString())
+// console.log(rect1.calculateArea()) // 600
+// console.log(rect1.calculatePerimeter()); // 100
+// console.log(rect1.toString())
 //Rettangolo
 //base: 30
 //altezza: 20
 //colore: rosso
 //area: 600
 //perimetro: 100
+
+const stefania = new Student("stefania", "dagnino", [10, 9, 7, 8, 8]);
+const leonardo = new Student("leonardo", "silva", [3, 4, 4, 2, 5]);
+const salma = new Student("salma", "sobhi", [6, 6, 6]);
+
+const andrea = new Teacher("andrea", "asioli", [stefania, leonardo, salma]);
+
+const eros = new StudentTutor("eros", "balan", [10, 9, 7, 8, 8], leonardo);
+
+
+console.log(stefania.toString());
+
+
+eros.addMark(7);
+console.log(eros.calculateMean())
+console.log(leonardo.calculateMean())
+
+leonardo.addMark(10);
+leonardo.addMark(9);
+leonardo.addMark(9.5);
+leonardo.addMark(8);
+console.log(leonardo.calculateMean());
+console.log(eros.calculateMean());
+
+
+console.log(eros.toString());
+//nome: eros
+//cognome: balan
+//media: 9.1666666
+//--------------------
+//allievo: leonardo silva
+//media allievo: 6.0555555
+
+
+console.log(andrea.toString());
+//nome: andrea
+//cognome: asioli
+//--------------------
+//allievi:
+//stefania dagnino - media: 8
+//leonardo silva - media: 6.0555
+//salma sobhi - media: 6
+//--------------------
+//media della classe :6,68
