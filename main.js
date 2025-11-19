@@ -104,7 +104,7 @@ const evelin = new Teacher("evelin", "medina", [eros]);
 
 
 
-const elisabetta = new Principal("elisabbetta", "fegino", [andrea, evelin])
+//const elisabetta = new Principal("elisabbetta", "fegino", [andrea, evelin])
 
 
 console.log(stefania.toString());
@@ -140,10 +140,10 @@ console.log(andrea.toString());
 //leonardo silva - media: 6.0555
 //salma sobhi - media: 6
 //--------------------
-//media della classe :6,68
+//media della classe: 6,68
 
 
-console.log(elisabetta.toString())
+//console.log(elisabetta.toString())
 
 //nome: elisabetta
 //cognome: fegino

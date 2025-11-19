@@ -25,4 +25,13 @@ class StudentTutor extends Student{
 
     }
 
+    toString(){
+
+        return super.toString() + "\n" +
+               "-------------------\n" +
+               "allievo: " + this.tutee.name + " " + this.tutee.surname + "\n" +
+               "media allievo: " + this.tutee.calculateMean();
+
+    }
+
 }
