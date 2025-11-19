@@ -1,7 +1,7 @@
 class Teacher extends Human{
 
-    constructor(name, surname, students){
-        super(name, surname);
+    constructor(name, surname, yob, students){
+        super(name, surname, yob);
         this.students = students;
     }
 

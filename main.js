@@ -93,18 +93,18 @@ console.log('object oriented programming')
 //area: 600
 //perimetro: 100
 
-const stefania = new Student("stefania", "dagnino", [10, 9, 7, 8, 8]);
-const leonardo = new Student("leonardo", "silva", [3, 4, 4, 2, 5]);
-const salma = new Student("salma", "sobhi", [6, 6, 6]);
+const stefania = new Student("stefania", "dagnino", 1990, [10, 9, 7, 8, 8]);
+const leonardo = new Student("leonardo", "silva", 1991, [3, 4, 4, 2, 5]);
+const salma = new Student("salma", "sobhi", 2000, [6, 6, 6]);
 
-const eros = new StudentTutor("eros", "balan", [10, 9, 7, 8, 8], leonardo);
+const eros = new StudentTutor("eros", "balan", 2005, [10, 9, 7, 8, 8], leonardo);
 
-const andrea = new Teacher("andrea", "asioli", [stefania, leonardo, salma]);
-const evelin = new Teacher("evelin", "medina", [eros]);
+const andrea = new Teacher("andrea", "asioli", 1970, [stefania, leonardo, salma]);
+const evelin = new Teacher("evelin", "medina", 1985, [eros]);
 
 
 
-//const elisabetta = new Principal("elisabbetta", "fegino", [andrea, evelin])
+const elisabetta = new Principal("elisabbetta", "fegino", 1960, [andrea, evelin])
 
 
 console.log(stefania.toString());
@@ -143,7 +143,7 @@ console.log(andrea.toString());
 //media della classe: 6,68
 
 
-//console.log(elisabetta.toString())
+console.log(elisabetta.toString())
 
 //nome: elisabetta
 //cognome: fegino
@@ -152,3 +152,21 @@ console.log(andrea.toString());
 //asioli andrea - numero studenti: 3
 //evelin medina - numero studenti: 1
 
+// eros.name = "giovanni";
+
+// console.log(eros.toString())
+
+const yearOfBirthOfEros = eros.yob;
+console.log(yearOfBirthOfEros);
+
+eros.yob = 3000;
+
+console.log(eros.yob)
+
+eros.yob = 100;
+
+console.log(eros.yob)
+
+eros.yob = 1993;
+
+console.log(eros.yob)

@@ -1,7 +1,7 @@
 class Student extends Human {
 
-    constructor(name, surname, marks) {
-        super(name, surname)
+    constructor(name, surname, yob, marks) {
+        super(name, surname, yob)
         if(marks){
             this.marks = marks;
         } else {
